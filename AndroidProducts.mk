@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rr_laurel_sprout.mk
+    $(LOCAL_DIR)/du_laurel_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    rr_laurel_sprout-user \
-    rr_laurel_sprout-userdebug \
-    rr_laurel_sprout-eng
+    du_laurel_sprout-user \
+    du_laurel_sprout-userdebug \
+    du_laurel_sprout-eng

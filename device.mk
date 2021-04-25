@@ -25,6 +25,8 @@
 $(call inherit-product, device/xiaomi/sm6125-common/common.mk)
 # Inherit proprietary MIUICamera files
 $(call inherit-product, vendor/miuicamera/common/common-vendor.mk)
+# Inherit Dirac SoundFX
+$(call inherit-product, vendor/xiaomi/dirac/dirac.mk)
 
 DEVICE_PATH := device/xiaomi/laurel_sprout
 
@@ -81,18 +83,18 @@ PRODUCT_PACKAGES_DEBUG += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-lineage \
-    $(DEVICE_PATH)/overlay-rr
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
+    $(DEVICE_PATH)/overlay-du
 
 # Fingerprint feature
 PRODUCT_COPY_FILES += \
-    vendor/rr/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
-
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+    
 PRODUCT_PACKAGES += \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_laurel_sprout
+    
+# Wallpapers
+PRODUCT_PACKAGES += \
+    PixelLiveWallpaperPrebuilt
     
 # Audio
 PRODUCT_COPY_FILES += \

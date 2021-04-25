@@ -39,4 +39,7 @@
     <!-- The maximum offset in either direction that icons move to prevent burn-in on AOD. -->
     <dimen name="default_burn_in_prevention_offset">1dp</dimen>
     
+    <!-- Corner Padding -->
+    <dimen name="rounded_corner_content_padding">10dp</dimen>
+    
 </resources>    

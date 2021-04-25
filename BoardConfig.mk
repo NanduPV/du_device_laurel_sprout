@@ -29,21 +29,11 @@ DEVICE_PATH := device/xiaomi/laurel_sprout
 
 BUILD_BROKEN_DUP_RULES := true
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1560
-TARGET_SCREEN_WIDTH := 720
-
 # Display
 TARGET_SCREEN_DENSITY := 320
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
-
-# Kernel
-TARGET_KERNEL_CONFIG := vendor/laurel_sprout_defconfig
-
-# Fenix Kernel
-#TARGET_KERNEL_CONFIG := vendor/fenix_defconfig 
 
 # Partitions
 BOARD_METADATAIMAGE_PARTITION_SIZE := 16777216

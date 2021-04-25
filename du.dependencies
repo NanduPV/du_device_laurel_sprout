@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "android_device_xiaomi_sm6125-common",
+    "target_path": "device/xiaomi/sm6125-common"
+  },
+  {
+    "repository": "android_kernel_xiaomi_laurel_sprout",
+    "target_path": "kernel/xiaomi/laurel_sprout"
+  }
+]
